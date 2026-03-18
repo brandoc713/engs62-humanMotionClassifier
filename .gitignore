@@ -1,0 +1,5 @@
+embeddedSystemImplementation/build/
+embeddedSystemImplementation/.venv/
+embeddedSystemImplementation/.DS_Store
+
+cnnTraining/.venv/

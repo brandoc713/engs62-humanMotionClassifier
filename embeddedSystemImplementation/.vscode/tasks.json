@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+          "label": "(OSX) Build for STM32L432KC",
+          "type": "shell",
+          "command": "make GCC_PATH=${userHome}/tools/arm-gnu-toolchain-13.2.Rel1-darwin-arm64-arm-none-eabi/bin",
+          "problemMatcher": {
+            "base": "$gcc",
+            "fileLocation": ["relative", "${workspaceFolder}"]
+          },
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          }
+        },
+        {
+          "label": "(Win) Build for STM32L432KC",
+          "type": "shell",
+          "command": "make GCC_PATH=${userHome}\\tools\\arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi\\bin",
+          "problemMatcher": {
+            "base": "$gcc",
+            "fileLocation": ["relative", "${workspaceFolder}"]
+          },
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          }
+        },
+        {
+          "label": "(OSX-Intel) Build for STM32L432KC",
+          "type": "shell",
+          "command": "make GCC_PATH=${userHome}/tools/arm-gnu-toolchain-13.2.Rel1-darwin-x86_64-arm-none-eabi/bin",
+          "problemMatcher": {
+            "base": "$gcc",
+            "fileLocation": ["relative", "${workspaceFolder}"]
+          },
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          }
+        },
+    ]
+}

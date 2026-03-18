@@ -1,0 +1,72 @@
+{
+    "version" : "0.2.0",
+    "projectName" : "STM32L432KC",
+    "configurations" : [
+        {
+            "name" : "(OSX) JLink GDB Server",
+            "cwd" : "${workspaceFolder}",
+            "executable" : "${workspaceFolder}/build/W26-W7-LA.elf",
+            "request": "launch",
+            "type" : "cortex-debug",
+            "servertype" : "external",
+            "gdbTarget": "localhost:2331",
+            "gdbPath" : "${userHome}/tools/arm-gnu-toolchain-13.2.Rel1-darwin-arm64-arm-none-eabi/bin/arm-none-eabi-gdb",
+            "runToEntryPoint": "main",
+            "svdFile" : "STM32L4x2.svd",
+            "overrideRestartCommands": [
+                "monitor halt",
+                "monitor reset"
+            ],
+            "overrideResetCommands": [
+                "monitor reset"
+            ],
+            "preLaunchCommands": [
+                "monitor reset"
+            ],
+        },
+         {
+            "name" : "(OSX-Intel) JLink GDB Server",
+            "cwd" : "${workspaceFolder}",
+            "executable" : "${workspaceFolder}/build/W26-W7-LA.elf",
+            "request": "launch",
+            "type" : "cortex-debug",
+            "servertype" : "external",
+            "gdbTarget": "localhost:2331",
+            "gdbPath" : "${userHome}/tools/arm-gnu-toolchain-13.2.Rel1-darwin-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb",
+            "runToEntryPoint": "main",
+            "svdFile" : "STM32L4x2.svd",
+            "overrideRestartCommands": [
+                "monitor halt",
+                "monitor reset"
+            ],
+            "overrideResetCommands": [
+                "monitor reset"
+            ],
+            "preLaunchCommands": [
+                "monitor reset"
+            ],
+        },
+         {
+            "name" : "(Win) JLink GDB Server",
+            "cwd" : "${workspaceFolder}",
+            "executable" : "${workspaceFolder}/build/W26-W7-LA.elf",
+            "request": "launch",
+            "type" : "cortex-debug",
+            "servertype" : "external",
+            "gdbTarget": "localhost:2353",
+            "gdbPath" : "${userHome}\\tools\\arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gdb",
+            "runToEntryPoint": "main",
+            "svdFile" : "STM32L4x2.svd",
+            "overrideRestartCommands": [
+                "monitor halt",
+                "monitor reset"
+            ],
+            "overrideResetCommands": [
+                "monitor reset"
+            ],
+            "preLaunchCommands": [
+                "monitor reset"
+            ],
+        }
+    ]
+}
